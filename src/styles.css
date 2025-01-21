@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'nuku-nuku';
+    src: url('assets/fonts/nuku-nuku/nuku1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

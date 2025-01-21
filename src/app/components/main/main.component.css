@@ -1,0 +1,50 @@
+.background {
+    height: 100dvh;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: 0% 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background::before {    
+    content: "";
+    background-image: url("../../../assets/images/main-bg.png");
+    background-size: cover;
+    background-position: 25% 75%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.7;
+}
+
+.contact-info{
+    display: flex;
+    width: 100%;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.title {
+    font-family: 'nuku-nuku';
+    font-size: 8rem;
+    letter-spacing: 1mm;
+    color: black;
+}
+
+.subtitle {
+    font-family: "New Tegomin", serif;
+    font-size: 3rem;
+}
