@@ -140,7 +140,7 @@
 .language-icon .back {
     opacity: 0;
     transition: all 0s 0.15s;
-    transform: ratateY(180deg);
+    /* transform: ratateY(180deg); */
 }
 
 .language-icon::before {
@@ -153,19 +153,16 @@
     border: none; 
 }
 
-.language-btn:hover .language-icon, 
-.language-btn:active .language-icon {
+.language-btn:hover .language-icon {
     transform: rotateY(180deg);
 }
   
-.language-btn:hover .language-icon::after,
-.language-btn:active .language-icon::after {
+.language-btn:hover .language-icon::after {
     top: 0;
     left: 0;
 }
 
-.language-btn:hover .language-icon .back,
-.language-btn:active .language-icon .back {
+.language-btn:hover .language-icon .back {
     opacity: 1;
 }
 
