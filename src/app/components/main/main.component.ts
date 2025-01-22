@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
-  siteInEnglish = true;
-  languageIcon = '../../assets/images/us-flag.png';
+  siteInEnglish: boolean = true;
+  languageIcon: string = '../../assets/images/us-flag.png';
+  notInUseLanguageIcon: string = '../../assets/images/israel-flag.png';
   titleDescription: string = 'שף מומחה לאוכל יפני';
   descriptionClasses: string = 'subtitle hebrew-font';
 
@@ -23,9 +24,11 @@ export class MainComponent {
     if(this.siteInEnglish){
       this.englishTranslate();
       this.languageIcon = '../../assets/images/israel-flag.png';
+      this.notInUseLanguageIcon = '../../assets/images/us-flag.png';
     } else {
       this.hebrewTranslate();
       this.languageIcon = '../../assets/images/us-flag.png';
+      this.notInUseLanguageIcon = '../../assets/images/israel-flag.png';
     }
   }
 

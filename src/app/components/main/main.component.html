@@ -1,18 +1,21 @@
 <div class="background">
     <div class="contact-info">
-        <div class="contact-btn" (click)="languageChange()">
-            <img class="img-icon" [src]="languageIcon">
-        </div>
-        <div class="contact-btn">
+        <button class="contact-btn language-btn" (click)="languageChange()">
+           <div class="img-icon language-icon">
+              <img class="front" [src]="languageIcon">
+              <img class="back" [src]="notInUseLanguageIcon">
+           </div>
+        </button>
+        <a class="contact-btn" href="https://www.instagram.com/chef.ofer.hermoni.tenka/">
             <img class="img-icon" src="../../../assets/images/instagram-logo.png">
-        </div>
-        <div class="contact-btn">
+        </a>
+        <a class="contact-btn" href="https://www.facebook.com/ofer.hermoni.5">
             <img class="img-icon" src="../../../assets/images/facebook-logo.png">
-        </div>
-        <div class="contact-btn whatsapp-btn">
+        </a>
+        <a class="contact-btn whatsapp-btn">
             <img class="img-icon whatsapp-icon" src="../../../assets/images/whatsapp-logo.png">
             <span>0528806979</span>
-        </div>
+        </a>
     </div>
     <div class="title-container">
         <div class="title">OFER HERMONI</div>
