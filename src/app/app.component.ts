@@ -9,7 +9,7 @@ import { AboutComponent } from './components/about/about.component';
   standalone: true,
   imports: [ CommonModule, RouterOutlet, MainComponent, AboutComponent ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ofer';
