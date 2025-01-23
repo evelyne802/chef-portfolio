@@ -3,23 +3,22 @@ import { MainService } from '../../services/main.service';
 import { AboutComponent } from '../about/about.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-//import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll-core';
+import { PageScrollService, NgxPageScrollCoreModule  } from 'ngx-page-scroll-core';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [ AboutComponent, RouterLink],
+  imports: [ 
+    AboutComponent, 
+    RouterLink, 
+    NgxPageScrollCoreModule
+  ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
 
-  constructor(
-    //private pageScrollService: PageScrollService, 
-    @Inject(DOCUMENT) private document: any,
-    private mainService: MainService,
-    private route: ActivatedRoute 
-  ) {}
+  constructor( private mainService: MainService ) {}
 
 
   siteInEnglish: boolean = true;
@@ -33,18 +32,8 @@ export class MainComponent {
 
   ngOnInit(){
     this.updateLanguage();
-    console.log(this.route.params);
-    // .map((params: any) => params['id'])
-    // .subscribe((id: string) => {
-    //   this.scrollTo(id)
-    //   console.log(id);
-    // });
   }
 
-  scrollTo(id: string) {
-    //let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#' + id);
-    //this.pageScrollService.start(pageScrollInstance);
- }
 
   updateLanguage() {
     if(this.siteInEnglish){
