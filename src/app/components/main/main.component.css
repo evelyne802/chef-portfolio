@@ -23,6 +23,14 @@
     opacity: 0.6;
 }
 
+.transition-bg {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff6fb 100%);
+    bottom: 0;
+    position: absolute;
+}
+
 .title-container {
     margin: 50px 0;
     display: flex;
@@ -238,25 +246,38 @@ a, a:active, a:focus {
     .header {
         flex-direction: column;
     }
+
+    .menu-btn {
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+
+    .menu-btn::after {
+        top: 25px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        padding: 50px 50px 0 50px;
+    }
 }
 
 @media screen and (max-width: 650px) {
     .title-container {
         margin: 25px 0;
     }
-
-    .title {
-        font-size: 6rem;
-    }
 }
 
 @media screen and (max-width: 525px) {
-    .title {
-        font-size: 5rem;
-    }
-
     .subtitle {
         font-size: 2rem;
+    }
+
+    .menu-btn {
+        font-size: 1.1rem;
+        margin: 20px 10px;
     }
 }
 
@@ -269,14 +290,8 @@ a, a:active, a:focus {
         font-size: 1.8rem;
     }
 
-    .contact-info {
-        padding: 50px 30px;
-    }
-}
-
-@media screen and (max-width: 415px) {
-    .contact-info {
-        padding: 50px 20px;
+    .header {
+        padding: 50px 30px 20px 30px;
     }
 }
 
@@ -299,6 +314,14 @@ a, a:active, a:focus {
 }
 
 @media screen and (max-width: 390px) {
+    .title {
+        font-size: 3.9rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
     .contact-btn {
         width: 40px;
         height: 40px;

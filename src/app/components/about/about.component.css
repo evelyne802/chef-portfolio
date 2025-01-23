@@ -1,25 +1,78 @@
+* {
+    font-family: "Heebo";
+}
+
 .about-background {
     height: 100dvh;
     width: 100%;
-    background-size: cover;
-    background-position: 0% 100%;
     position: relative;
+    background-color: #fff6fb;
     left: 0;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px; 
 }
 
-.about-background::before {    
-    content: "";
-    background-image: url("../../../assets/images/about-bg.png");
-    background-size: cover;
-    background-position: 25% 75%;
-    position: absolute;
+.sakura-branch {
     top: 0px;
     right: 0px;
-    bottom: 0px;
-    left: 0px;
     opacity: 1;
+    position: absolute;
+    overflow: hidden;
+    width: 25vw;
+}
+
+.sakura-branch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.sakura-branch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #fff6fb 0%, #fff6fb1e 20%, #fff6fb00 60%, #fff6fb00 100%);
+}
+
+.chef-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 30px 15px 30px;
+}
+
+.picture {
+
+}
+
+.circle {
+    width: 215px;
+    height: 215px;
+    background-color: #d00d0dcb;
+    border-radius: 50%; 
+    margin: 20px;
+}
+
+.circle img {
+    height: 220px;
+    position: relative;
+    right: 20px;
+}
+
+.name {
+    font-size: 1.7rem;
+}
+
+p {
+    width: 60vw;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
 }
