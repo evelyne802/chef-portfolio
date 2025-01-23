@@ -76,3 +76,54 @@ p {
     text-align: center;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width: 850px) {
+    .circle {
+        width: 195px;
+        height: 195px;
+    }
+    
+    .circle img {
+        height: 200px;
+        right: 19px;
+    }
+
+    p {
+        width: 75vw;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    p {
+        width: 80vw;
+        font-size: 0.9rem;
+    }
+
+    .circle {
+        width: 175px;
+        height: 175px;
+    }
+    
+    .circle img {
+        height: 180px;
+        right: 17px;
+    }
+
+    .name {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .circle {
+        width: 155px;
+        height: 155px;
+    }
+    
+    .circle img {
+        height: 160px;
+        right: 15px;
+    }
+
+}
