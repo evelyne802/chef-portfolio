@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  @Input() siteInEnglish: boolean = false;  
+  aboutInfo: string ='';
+
+  ngOnInit(){
+
+  }
+
+  
 }

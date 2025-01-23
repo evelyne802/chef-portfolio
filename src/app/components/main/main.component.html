@@ -1,21 +1,27 @@
-<div class="background">
-    <div class="contact-info">
-        <button class="contact-btn language-btn" (click)="changeLanguage()">
-           <div class="img-icon language-icon">
-              <img class="front" [src]="languageIcon">
-              <img class="back" [src]="notInUseLanguageIcon">
-           </div>
-        </button>
-        <a class="contact-btn" href="https://www.instagram.com/chef.ofer.hermoni.tenka/">
-            <img class="img-icon" src="../../../assets/images/instagram-logo.png">
-        </a>
-        <a class="contact-btn" href="https://www.facebook.com/ofer.hermoni.5">
-            <img class="img-icon" src="../../../assets/images/facebook-logo.png">
-        </a>
-        <a class="contact-btn whatsapp-btn" href="https://api.whatsapp.com/send?phone=972528806979">
-            <img class="img-icon whatsapp-icon" src="../../../assets/images/whatsapp-logo.png">
-            <span>0528806979</span>
-        </a>
+<div class="main-background">
+    <div class="header">
+        <div class="contact-info">
+            <button class="contact-btn language-btn" (click)="changeLanguage()">
+                <div class="img-icon language-icon">
+                   <img class="front" [src]="languageIcon">
+                   <img class="back" [src]="notInUseLanguageIcon">
+                </div>
+             </button>
+             <a class="contact-btn" href="https://www.instagram.com/chef.ofer.hermoni.tenka/">
+                 <img class="img-icon" src="../../../assets/images/instagram-logo.png">
+             </a>
+             <a class="contact-btn" href="https://www.facebook.com/ofer.hermoni.5">
+                 <img class="img-icon" src="../../../assets/images/facebook-logo.png">
+             </a>
+             <a class="contact-btn whatsapp-btn">
+                 <img class="img-icon whatsapp-icon" src="../../../assets/images/whatsapp-logo.png">
+                 <a href="https://api.whatsapp.com/send?phone=972528806979">0528806979</a>
+             </a>
+        </div>
+        <div class="menu">
+            <a [class]="menuBtnClasses">{{ aboutBtn }}</a>
+            <a [class]="menuBtnClasses">{{ galleryBtn }}</a>
+        </div>
     </div>
     <div class="title-container">
         <div class="title">OFER HERMONI</div>
@@ -23,3 +29,5 @@
         <label [class]="descriptionClasses">{{ titleDescription }}</label>
     </div>
 </div>
+
+<app-about [siteInEnglish]="siteInEnglish"></app-about>

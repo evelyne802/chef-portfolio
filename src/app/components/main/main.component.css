@@ -1,7 +1,6 @@
-.background {
+.main-background {
     height: 100dvh;
     width: 100%;
-    position: absolute;
     background-size: cover;
     background-position: 0% 100%;
     left: 0;
@@ -11,7 +10,7 @@
     align-items: center;
 }
 
-.background::before {    
+.main-background::before {    
     content: "";
     background-image: url("../../../assets/images/main-bg.png");
     background-size: cover;
@@ -56,12 +55,56 @@
     font-family: "New Tegomin", serif;
 }
 
-.contact-info{
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 50px;
     z-index: 1;
-    align-self: flex-start;
+}
+
+.contact-info{
     display: flex;
-    width: 100%;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-btn {
+    font-family: "New Tegomin", serif;
+    margin: 0 15px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #000;
+}
+
+.menu-btn::after {
+    content: "";
+    position: absolute;
+    width: 92%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.08em;
+    top: 33px;
+    left: 2%;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.menu-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .contact-btn {
@@ -74,6 +117,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
+}
+
+.contact-btn:hover {
+    background-color: rgba(12, 12, 12, 0.8);
 }
 
 .whatsapp-icon {
@@ -82,20 +130,21 @@
 
 .whatsapp-btn {
     padding: 7.5px;
-    background-color: rgba(37, 37, 37, 0.8);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     transition: width ease 1s;
+    transition: 1s;
 }
 
 .whatsapp-btn:hover {
     width: 160px;
     border-radius: 50px;
+    background-color: rgba(12, 12, 12, 0.8);
 }
 
-.whatsapp-btn span {
+.whatsapp-btn a {
     font-family: sans-serif;
     font-size: 1rem;
     color: rgb(190, 190, 190);
@@ -108,7 +157,7 @@
     padding: 0 0px;
 }
 
-.whatsapp-btn:hover span {
+.whatsapp-btn:hover a {
     max-width: 100px;
     animation-delay: 2s;
 }
@@ -164,6 +213,11 @@
 
 .language-btn:hover .language-icon .back {
     opacity: 1;
+}
+
+a, a:active, a:focus {
+    text-decoration: none;
+    color: black;
 }
 
 @media screen and (max-width: 1100px) {
