@@ -3,7 +3,7 @@
 }
 
 .about-background {
-    height: 100lvh;
+    height: 100vh;
     width: 100%;
     position: relative;
     background-color: #fff6fb;
@@ -46,10 +46,6 @@
     flex-direction: column;
     align-items: center;
     margin: 0px 30px 15px 30px;
-}
-
-.picture {
-
 }
 
 .circle {
