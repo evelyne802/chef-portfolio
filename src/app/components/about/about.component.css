@@ -101,6 +101,7 @@ p {
     .about-container {
         width: 80vw;
         font-size: 0.9rem;
+        margin-top: 30px;
     }
 
     .circle {
@@ -116,6 +117,7 @@ p {
     .name {
         font-size: 1.4rem;
     }
+
 }
 
 @media screen and (max-width: 500px) {
