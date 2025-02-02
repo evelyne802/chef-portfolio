@@ -23,8 +23,8 @@ export class AboutComponent {
       this.aboutInfo = `Ofer began his journey in 1993 when he moved to Japan to study the secrets of Japanese cuisine. 
                         Over the course of seven years, he worked and trained in Japanese restaurants, 
                         gaining professional experience in the field. Upon his return to Israel, 
-                        he opened the restaurant “Yakiniku Tenaka,” specializing in Japanese grill meals, 
-                        followed by “Tenaka,” a Japanese delicatessen. About ${this.years} years ago, 
+                        he opened the restaurant “Yakiniku Tenka,” specializing in Japanese grill meals, 
+                        followed by “Tenka,” a Japanese delicatessen. About ${this.years} years ago, 
                         he decided to take an independent path and started preparing authentic 
                         Japanese food for private dining experiences.`;
     } else {

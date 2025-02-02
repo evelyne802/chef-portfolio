@@ -12,17 +12,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 20px; 
 }
 
-.sakura-branch {
+.about-background::before {    
+    content: "";
+    background-image: url("../../../assets/images/about-bg.png");
+    background-size: cover;
+    background-position: 80% 20%;
+    position: absolute;
     top: 0px;
     right: 0px;
-    opacity: 1;
-    position: absolute;
-    overflow: hidden;
-    width: 25vw;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+}
+
+.about-container {
+    width: 60vw;
+    z-index: 2;
+    margin-top: 50px;
 }
 
 .sakura-branch img {
@@ -67,10 +76,8 @@
 }
 
 p {
-    width: 60vw;
     padding: 10px;
     text-align: center;
-    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 850px) {
@@ -84,14 +91,14 @@ p {
         right: 19px;
     }
 
-    p {
+    .about-container {
         width: 75vw;
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 650px) {
-    p {
+    .about-container {
         width: 80vw;
         font-size: 0.9rem;
     }
