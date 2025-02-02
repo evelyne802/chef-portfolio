@@ -1,9 +1,9 @@
 import { Component, Inject } from '@angular/core';
 import { MainService } from '../../services/main.service';
 import { AboutComponent } from '../about/about.component';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
-import { PageScrollService, NgxPageScrollCoreModule  } from 'ngx-page-scroll-core';
+import { RouterLink } from '@angular/router';
+import { NgxPageScrollCoreModule  } from 'ngx-page-scroll-core';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-main',
@@ -11,7 +11,8 @@ import { PageScrollService, NgxPageScrollCoreModule  } from 'ngx-page-scroll-cor
   imports: [ 
     AboutComponent, 
     RouterLink, 
-    NgxPageScrollCoreModule
+    NgxPageScrollCoreModule,
+    NgOptimizedImage
   ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
