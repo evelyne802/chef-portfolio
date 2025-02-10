@@ -5,6 +5,12 @@
     font-style: normal;
 }
 
+:root {
+    --text-outline-color: #000000;
+    --text-outline: -1px -1px 0 var(--text-outline-color), 1px -1px 0 var(--text-outline-color), -1px 1px 0 var(--text-outline-color), 1px 1px 0 var(--text-outline-color);
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;

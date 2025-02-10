@@ -1,35 +1,15 @@
-<div class="main-background">
-    <div class="header">
-        <div class="contact-info">
-            <button class="contact-btn language-btn" (click)="changeLanguage()">
-                <div class="img-icon language-icon">
-                   <img class="front" [src]="languageIcon">
-                   <img class="back" [src]="notInUseLanguageIcon">
-                </div>
-             </button>
-             <a class="contact-btn" href="https://www.instagram.com/chef.ofer.hermoni.tenka/">
-                 <img class="img-icon" src="../../../assets/images/instagram-logo.png">
-             </a>
-             <a class="contact-btn" href="https://www.facebook.com/ofer.hermoni.5">
-                 <img class="img-icon" src="../../../assets/images/facebook-logo.png">
-             </a>
-             <a class="contact-btn whatsapp-btn">
-                 <img class="img-icon whatsapp-icon" src="../../../assets/images/whatsapp-logo.png">
-                 <a href="https://api.whatsapp.com/send?phone=972528806979">0528806979</a>
-             </a>
-        </div>
-        <div class="menu">
-            <a [class]="menuBtnClasses">{{ galleryBtn }}</a>
-            <a pageScroll href="#about" [class]="menuBtnClasses">{{ aboutBtn }}</a>
+<html #main id="main" (wheel)="onScroll($event)">
+    <app-header (changeLanEvent)="changeLanguage()"></app-header>
+    <div class="main-background">
+        <div class="title-container">
+            <div class="title">OFER HERMONI</div>
+            <label class="subtitle">オフェル ヘレモニ</label>
+            <label [class]="descriptionClasses">{{ titleDescription }}</label>
         </div>
     </div>
-    <div class="title-container">
-        <div class="title">OFER HERMONI</div>
-        <label class="subtitle">オファー ハーモニ</label>
-        <label [class]="descriptionClasses">{{ titleDescription }}</label>
-    </div>
-    <!-- <div class="transition-bg"></div> -->
-</div>
 
-<app-about id="about" [siteInEnglish]="siteInEnglish"></app-about>
+    <app-about id="about" [siteInEnglish]="siteInEnglish"></app-about>
+    <app-gallery id="gallery" [siteInEnglish]="siteInEnglish"></app-gallery>
+    <app-menus id="menus" [siteInEnglish]="siteInEnglish"></app-menus>
 
+</html>

@@ -9,8 +9,5 @@ export class MainService {
 
   siteInEnglish: boolean = false;
 
-  updateLanguage(){
-    this.siteInEnglish = !this.siteInEnglish;
-  }
 
 }
