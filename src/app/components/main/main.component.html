@@ -1,15 +1,10 @@
-<html #main id="main" (wheel)="onScroll($event)">
-    <app-header (changeLanEvent)="changeLanguage()"></app-header>
-    <div class="main-background">
-        <div class="title-container">
-            <div class="title">OFER HERMONI</div>
-            <label class="subtitle">オフェル ヘレモニ</label>
-            <label [class]="descriptionClasses">{{ titleDescription }}</label>
-        </div>
+<app-header (changeLanEvent)="changeLanguage()"></app-header>
+<div class="main-background">
+    <div class="title-container">
+        <div class="title">OFER HERMONI</div>
+        <label class="subtitle">オフェル ヘレモニ</label>
+        <label [class]="descriptionClasses">{{ titleDescription }}</label>
     </div>
+</div>
 
-    <app-about id="about" [siteInEnglish]="siteInEnglish"></app-about>
-    <app-gallery id="gallery" [siteInEnglish]="siteInEnglish"></app-gallery>
-    <app-menus id="menus" [siteInEnglish]="siteInEnglish"></app-menus>
-
-</html>
+ 

@@ -1,0 +1,29 @@
+* {
+    font-family: "Heebo";
+}
+
+.about-background {
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    background-color: #fff6fb;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+}
+
+.about-background::before {    
+    content: "";
+    background-image: url("../../../assets/images/about-bg.png");
+    background-size: cover;
+    background-position: 80% 20%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}

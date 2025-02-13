@@ -7,7 +7,14 @@ export class MainService {
 
   constructor() { }
 
-  siteInEnglish: boolean = false;
+  siteInEnglish: boolean = true;
 
+  updateLanguage(){
+    this.siteInEnglish = !this.siteInEnglish
+  }
+
+  getLanguage(){
+    return this.siteInEnglish
+  }
 
 }

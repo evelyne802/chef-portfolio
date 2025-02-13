@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menus.component.css']
 })
 export class MenusComponent {
-  
+
   @Input() siteInEnglish: boolean = false;  
 
 }

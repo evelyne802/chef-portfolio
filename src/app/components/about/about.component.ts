@@ -1,32 +1,43 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [ 
+    HeaderComponent
+  ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
 
-  @Input() siteInEnglish: boolean = false;  
+  constructor( private mainService: MainService ){
+  }
+
+  siteInEnglish: boolean = false;  
   
   aboutInfo: string ='';
   years:number = new Date().getFullYear()-2021;
 
-  ngOnChanges(){
-    this.changeLanguage();
+  ngOnInit() {
+    this.siteInEnglish = this.mainService.getLanguage();
+    this.updateLanguage();
   }
 
   changeLanguage() {
+    this.siteInEnglish = !this.siteInEnglish;
+    this.updateLanguage();
+  }
+
+  updateLanguage(){
     if(this.siteInEnglish){
-      this.aboutInfo = `Ofer began his journey in 1993 when he moved to Japan to study the secrets of Japanese cuisine. 
-                        Over the course of seven years, he worked and trained in Japanese restaurants, 
-                        gaining professional experience in the field. Upon his return to Israel, 
-                        he opened the restaurant “Yakiniku Tenka,” specializing in Japanese grill meals, 
-                        followed by “Tenka,” a Japanese delicatessen. About ${this.years} years ago, 
-                        he decided to take an independent path and started preparing authentic 
-                        Japanese food for private dining experiences.`;
+      this.aboutInfo = `Ofer's journey began in 1993 when he moved to Japan to study Japanese cuisine. 
+                        Over seven years, he trained in Japanese restaurants, gaining professional experience. 
+                        Returning to Israel, he opened “Yakiniku Tenka,” a Japanese grill, and later “Tenka,” 
+                        a delicatessen. About ${this.years} years ago, he began offering authentic Japanese food for 
+                        private dining experiences.`;
     } else {
       this.aboutInfo = `עופר החל את דרכו בשנת 1993, כשעבר ליפן ללמוד את סודות המטבח היפני. 
                         במהלך שבע שנים עבד ולמד במסעדות יפניות, וצבר ניסיון מקצועי בתחום. 
