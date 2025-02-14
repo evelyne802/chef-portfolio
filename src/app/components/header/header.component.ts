@@ -26,7 +26,7 @@ export class HeaderComponent {
   notInUseLanguageIcon: string = '';
 
   ngOnInit(){
-    this.mainService.getLanguage();
+    this.siteInEnglish = this.mainService.getLanguage();
     console.log('english: ', this.siteInEnglish);
     this.updateLanguage();
   }
