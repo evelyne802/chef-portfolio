@@ -1,3 +1,4 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @font-face {
     font-family: 'nuku-nuku';
     src: url('assets/fonts/nuku-nuku/nuku1.ttf') format('truetype');
@@ -10,7 +11,6 @@
     --text-outline: -1px -1px 0 var(--text-outline-color), 1px -1px 0 var(--text-outline-color), -1px 1px 0 var(--text-outline-color), 1px 1px 0 var(--text-outline-color);
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,7 +18,16 @@
 }
 
 
-
 html {
     scroll-behavior: smooth;
 }
+
+button, 
+button:focus,
+button:active {
+    border: none !important;
+    outline: none !important;
+    outline-style: none !important;
+    background-color: #ffffff00;
+}
+

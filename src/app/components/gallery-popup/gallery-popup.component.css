@@ -1,0 +1,89 @@
+.popup-container {
+    /* width: 100%;
+    height: 100%; */
+}
+
+.popup-container img {
+    width: 405px;
+    height: 405px;
+}
+
+.popup-container button {
+    align-self: flex-end;
+}
+
+.close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    transition: 0.2s ease-in;
+    margin: 10px 20px;
+    right: 0;
+    z-index: 6;
+    top: 0;
+}
+
+.close:hover {
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 30px;
+    width: 3.5px;
+    background-color: #191919;
+    text-shadow: var(--text-outline);
+    border-radius: 8px;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+
+::ng-deep .cdk-overlay-container {
+    display: flex !important;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center !important;
+    z-index: 5;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+    width: 30vw;
+    height: 55dvh;
+} 
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    overflow: visible;
+}
+
+@media screen and (max-width:1150px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width:750px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 60vw;
+    }
+}  
+
+@media screen and (max-width:650px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 70vw;
+    }
+} 

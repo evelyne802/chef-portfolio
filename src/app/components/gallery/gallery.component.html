@@ -1,4 +1,19 @@
 <app-header (changeLanEvent)="changeLanguage()"></app-header>
 <div class="gallery-background">
-    
+    <div class="images-carousel">
+        <button class="carousel-control left" (click)="leftScroll('images')">
+            <img src="../../../assets/images/left-arrow.png" class="left-arrow-icon">
+        </button>
+
+        <div id="images" class="images">
+            <div (click)="openPopup(number)" class="gallery-img" *ngFor="let number of numbers">
+                <img src="../../../assets/images/gallery/minimized/img-{{number}}.png">
+            </div>
+        </div>
+
+
+        <button class="carousel-control right" (click)="rightScroll('images')">
+            <img src="../../../assets/images/right-arrow.png" class="right-arrow-icon">
+        </button>
+    </div>
 </div>
