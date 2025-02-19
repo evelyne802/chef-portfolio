@@ -18,6 +18,8 @@ import { GalleryPopupComponent } from '../gallery-popup/gallery-popup.component'
 })
 export class GalleryComponent {
 
+  screenSize: number = window.innerWidth;
+  gallerySize: number = this.screenSize * 0.7;
   numOfPictues: number = 33;
   numbers: number[] = Array.from(Array(this.numOfPictues).keys());
   readonly dialog = inject(MatDialog);
@@ -28,6 +30,7 @@ export class GalleryComponent {
   
   ngOnInit(){
     this.siteInEnglish = this.mainService.getLanguage();
+    console.log(this.screenSize);
   }
 
   openPopup(num: number) {
@@ -43,11 +46,11 @@ export class GalleryComponent {
 
   rightScroll(elementId: string) {
     const right = document.querySelector(`#${elementId}`);
-    right!.scrollBy(760, 0);
+    right!.scrollBy((this.gallerySize), 0);
   }
 
   leftScroll(elementId: string) {
     const left = document.querySelector(`#${elementId}`);
-    left!.scrollBy(-760, 0);
+    left!.scrollBy(-(this.gallerySize), 0);
   }
 }

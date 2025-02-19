@@ -124,3 +124,40 @@
     overflow:visible;
   }
 
+@media screen and (max-width:900px){
+
+  .images {
+    grid-auto-columns: minmax(150px, 1fr);
+    gap: 5px;
+  }
+
+  .gallery-img {
+    margin: 5px;
+  }
+
+  .gallery-img img {
+    height: 140px;
+    width: 140px;
+  }
+
+  .images-carousel {
+    height: 60svh;
+ }
+}
+
+@media screen and (max-width:600px){
+
+  .images {
+    grid-auto-columns: minmax(130px, 1fr);
+  }
+
+  .gallery-img img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .images-carousel {
+    height: 57svh;
+ }
+}
+
