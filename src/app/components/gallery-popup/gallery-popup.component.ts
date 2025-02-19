@@ -19,6 +19,9 @@ export class GalleryPopupComponent {
     public data: { imgNum: number },
   ){}
 
-  fullSizedImg: string = `../../../assets/images/gallery/full-sized/img-full-${this.data.imgNum}.png`;
+  screenSize = window.innerWidth;
+  fullSizedImg: string = this.screenSize > 650 ? 
+                          `../../../assets/images/gallery/full-sized/img-full-${this.data.imgNum}.png`:
+                          `../../../assets/images/gallery/mid-sized/img-mid-${this.data.imgNum}.png`;
 
 }
