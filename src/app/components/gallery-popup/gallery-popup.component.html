@@ -1,6 +1,11 @@
 <div class="popup-container">
-    <button mat-dialog-close>
-        <div class="close"></div>
-    </button>
+    <div class="top">
+        <button mat-dialog-close>
+            <div class="close"></div>
+        </button>
+        <p class="description">
+            {{ imgDescription }}
+        </p>
+    </div>
     <img [src]="fullSizedImg">
 </div>

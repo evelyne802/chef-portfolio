@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { DataService } from 'src/app/services/data.service';
+import { GalleryPicture } from 'src/app/types/types';
 
 @Component({
   standalone: true,
@@ -16,12 +18,16 @@ export class GalleryPopupComponent {
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
-    public data: { imgNum: number },
+    public data: { imgId: number, siteInEnglish: boolean },
+    private dataService: DataService
   ){}
 
-  screenSize = window.innerWidth;
+  screenSize: number = window.innerWidth;
+  imgDetails: GalleryPicture = this.dataService.getImage(this.data.imgId);
+  imgDescription: string = this.data.siteInEnglish? 
+                           this.imgDetails.englishDescription : 
+                           this.imgDetails.hebrewDescription
   fullSizedImg: string = this.screenSize > 650 ? 
-                          `../../../assets/images/gallery/full-sized/img-full-${this.data.imgNum}.png`:
-                          `../../../assets/images/gallery/mid-sized/img-mid-${this.data.imgNum}.png`;
-
+                          `../../../assets/images/gallery/${this.imgDetails.fullUrl}` :
+                          `../../../assets/images/gallery/${this.imgDetails.midUrl}`;
 }

@@ -4,6 +4,8 @@ import { HeaderComponent } from '../header/header.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { NgFor } from '@angular/common';
 import { GalleryPopupComponent } from '../gallery-popup/gallery-popup.component';
+import { DataService } from 'src/app/services/data.service';
+import { GalleryPicture } from 'src/app/types/types';
 
 @Component({
   standalone: true,
@@ -18,25 +20,23 @@ import { GalleryPopupComponent } from '../gallery-popup/gallery-popup.component'
 })
 export class GalleryComponent {
 
+  constructor( private dataService: DataService, private mainService: MainService  ){}
+
   screenSize: number = window.innerWidth;
   gallerySize: number = this.screenSize * 0.7;
-  numOfPictues: number = 33;
-  numbers: number[] = Array.from(Array(this.numOfPictues).keys());
+  Images: GalleryPicture[] = this.dataService.getGalleryData();
+  siteInEnglish: boolean = false; 
   readonly dialog = inject(MatDialog);
 
-  constructor( private mainService: MainService ){}
-
-  siteInEnglish: boolean = false; 
   
   ngOnInit(){
     this.siteInEnglish = this.mainService.getLanguage();
-    console.log(this.screenSize);
   }
 
   openPopup(num: number) {
     const dialogRef = this.dialog.open(GalleryPopupComponent, {
       hasBackdrop: true,
-      data: { imgNum: num }
+      data: { imgId: num, siteInEnglish: this.siteInEnglish }
     });
   }
 

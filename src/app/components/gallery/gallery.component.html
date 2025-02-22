@@ -6,8 +6,8 @@
         </button>
 
         <div id="images" class="images">
-            <div (click)="openPopup(number)" class="gallery-img" *ngFor="let number of numbers">
-                <img src="../../../assets/images/gallery/minimized/img-{{number}}.png">
+            <div (click)="openPopup(img.id)" class="gallery-img" *ngFor="let img of Images">
+                <img src="../../../assets/images/gallery/{{ img.minUrl }}">
             </div>
         </div>
 
