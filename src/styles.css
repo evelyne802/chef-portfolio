@@ -17,7 +17,6 @@
     padding: 0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -29,5 +28,10 @@ button:active {
     outline: none !important;
     outline-style: none !important;
     background-color: #ffffff00;
+}
+
+.custom-dialog-container {
+    border-radius: 16px;
+    overflow: hidden;
 }
 

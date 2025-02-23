@@ -3,6 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { DataService } from 'src/app/services/data.service';
 import { GalleryPicture } from 'src/app/types/types';
+import { NgIf } from '@angular/common';
 
 @Component({
   standalone: true,
@@ -11,7 +12,8 @@ import { GalleryPicture } from 'src/app/types/types';
   styleUrls: ['./gallery-popup.component.css'],
   imports: [
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    NgIf
   ]
 })
 export class GalleryPopupComponent {
@@ -24,10 +26,12 @@ export class GalleryPopupComponent {
 
   screenSize: number = window.innerWidth;
   imgDetails: GalleryPicture = this.dataService.getImage(this.data.imgId);
-  imgDescription: string = this.data.siteInEnglish? 
+  hasDescription: boolean = this.imgDetails.englishDescription == '' ? false : true;
+  imgDescription: string = this.data.siteInEnglish ? 
                            this.imgDetails.englishDescription : 
                            this.imgDetails.hebrewDescription
   fullSizedImg: string = this.screenSize > 650 ? 
                           `../../../assets/images/gallery/${this.imgDetails.fullUrl}` :
                           `../../../assets/images/gallery/${this.imgDetails.midUrl}`;
+        
 }

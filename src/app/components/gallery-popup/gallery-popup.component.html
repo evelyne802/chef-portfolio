@@ -1,11 +1,16 @@
-<div class="popup-container">
-    <div class="top">
-        <button mat-dialog-close>
-            <div class="close"></div>
-        </button>
-        <p class="description">
-            {{ imgDescription }}
-        </p>
-    </div>
+<div *ngIf="hasDescription" class="popup-container">
+    <button mat-dialog-close>
+        <div class="close"></div>
+    </button>
     <img [src]="fullSizedImg">
+    <p class="description">
+        {{ imgDescription }}
+    </p>
+</div>
+
+<div *ngIf="!hasDescription" class="no-desc-popup-container">
+    <button mat-dialog-close>
+        <div class="close"></div>
+    </button>
+    <img class="no-desc-img" [src]="fullSizedImg">
 </div>

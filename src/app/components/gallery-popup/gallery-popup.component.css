@@ -3,31 +3,35 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
+    justify-content: space-between;
 }
 
-.top {
+.no-desc-popup-container {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.popup-container img {
+img {
+    width: 330px;
+}
+
+.no-desc-img {
     width: 350px;
-    height: 350px;
+    margin: 15px 0 25px 0;
 }
 
 .description {
     font-family: 'Heebo';
-    margin: 0px 20px 15px 20px;
+    margin: 15px 10px 25px 10px;
     font-size: 1.1rem;
     text-align: center;
 }
 
-.popup-container button {
+button {
     align-self: flex-end;
 }
 
@@ -37,7 +41,7 @@
     height: 20px;
     opacity: 0.8;
     transition: 0.2s ease-in;
-    margin: 15px 20px;
+    margin: 20px 25px;
     right: 0;
     z-index: 6;
     top: 0;
@@ -79,7 +83,7 @@
 
 ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
     width: 400px;
-    height: 470px;
+    height: 480px;
 } 
 
 ::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
@@ -92,25 +96,39 @@
 
 @media screen and (max-width:600px){
     ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
-        width: 300px;
-        height: 370px;
+        width: 355px;
+        height: 390px;
     }
 
-    .popup-container img {
+    .no-desc-img {
+        width: 280px;
+    }
+
+    img {
         width: 250px;
-        height: 250px;
     }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
     ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
-        width: 270px;
-        height: 340px;
+        width: 310px;
+        height: 370px;
     }
 
-    .popup-container img {
+    .popup-container {
+        justify-content: space-around;
+    }
+
+    .description {
+        margin: 20px 15px;
+    }
+
+    .no-desc-img {
+        width: 250px;
+    }
+
+    img {
         width: 220px;
-        height: 220px;
     }
 }
 

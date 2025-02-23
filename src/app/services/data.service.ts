@@ -20,7 +20,7 @@ export class DataService {
     { 
         id: 1, 
         hebrewDescription: "טורו סלמון ברוטב סויה - ג'ינג'ר", 
-        englishDescription: "Salmon Toro in Soy - Ginger Sauce",
+        englishDescription: "Salmon Toro in Soy-Ginger Sauce",
         fullUrl: "full-sized/img-full-22.png",
         midUrl: "mid-sized/img-mid-22.png",
         minUrl: "minimized/img-22.png",    
@@ -59,8 +59,8 @@ export class DataService {
     },
     { 
         id: 6, 
-        hebrewDescription: "בשר סרטנים ופטריות שימג'י בחמאה וסאקה", 
-        englishDescription: "Crab meat and Shimeji mushrooms in butter and sake",
+        hebrewDescription: "בשר סרטנים ופטריות שימג'י", 
+        englishDescription: "Crab meat and Shimeji mushrooms",
         fullUrl: "full-sized/img-full-6.png",
         midUrl: "mid-sized/img-mid-6.png",
         minUrl: "minimized/img-6.png",    

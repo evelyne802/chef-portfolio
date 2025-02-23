@@ -35,6 +35,7 @@ export class GalleryComponent {
 
   openPopup(num: number) {
     const dialogRef = this.dialog.open(GalleryPopupComponent, {
+      panelClass: 'custom-dialog-container',
       hasBackdrop: true,
       data: { imgId: num, siteInEnglish: this.siteInEnglish }
     });
