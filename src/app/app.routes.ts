@@ -5,8 +5,8 @@ import { MenusComponent } from './components/menus/menus.component';
 import { MainComponent } from './components/main/main.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: MainComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
+    { path: 'home', component: MainComponent, data: { animation: 'HomePage' } },
     { path: 'about', component: AboutComponent },
     { path: 'gallery', component: GalleryComponent },
     { path: 'menus', component: MenusComponent }
